@@ -8,7 +8,7 @@
 
 ### Idea 10.2.2026
 
-I chose this project because I wanted a simple idea for building a secure web application that is projected with some cyber security functions.
+I chose this AWS project because, I wanted a simple idea for building a secure web application that is monitored and projected with cloud security tools.
 
 Means:
   - Service is running in EC2 instance
