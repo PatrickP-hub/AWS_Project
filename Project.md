@@ -8,7 +8,7 @@
 
 ### Idea 10.2.2026
 
-- I chose this project because I wanted a simple idea for building a secure web application that is projected with some cyber security functions.
+I chose this project because I wanted a simple idea for building a secure web application that is projected with some cyber security functions.
 
 Means:
   - Service is running in EC2 instance
