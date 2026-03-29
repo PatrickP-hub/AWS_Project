@@ -39,13 +39,13 @@ Resources and Configuration
 
 Resources to create:
 
-EC2 instance – Windows or Linux web server (t2.micro, free tier).
-Security Group – Allow HTTP (80), HTTPS (443), and SSH (22) from your IP only.
-IAM Role – Minimum permissions for CloudWatch logs.
-CloudWatch Alarm – Monitor CPU or login activity.
-Optional: Key pair for SSH access.
+- EC2 instance – Windows or Linux web server (t2.micro, free tier).
+- Security Group – Allow HTTP (80), HTTPS (443), and SSH (22) from your IP only.
+- IAM Role – Minimum permissions for CloudWatch logs.
+- CloudWatch Alarm – Monitor CPU or login activity.
+- Optional: Key pair for SSH access.
 
-Step 1. Create Key Pair
+### Step 1. Create Key Pair
 
 `aws ec2 create-key-pair --key-name MyWebAppKey --query 'KeyMaterial' --output text > MyWebAppKey.pem`
 
@@ -54,7 +54,7 @@ Permissions must be resticted for SSH access on Linux
 
 `chmod 400 MyWebAppKey.pem`
 
-Step 2. Create Security Group
+### Step 2. Create Security Group
 
 `aws ec2 create-security-group --group-name MyWebAppSG --description "Security group for web application"`
 
@@ -62,15 +62,15 @@ Security group ID: ``
 
 Add inbound rules:
 
-SSH from my IP only : `aws ec2 authorize-security-group-ingress --group-name MyWebAppSG --protocol tcp --port 22 --cidr YOUR_IP/32`
+- SSH from my IP only : `aws ec2 authorize-security-group-ingress --group-name MyWebAppSG --protocol tcp --port 22 --cidr YOUR_IP/32`
 
-HTTP : `aws ec2 authorize-security-group-ingress --group-name MyWebAppSG --protocol tcp --port 80 --cidr 0.0.0.0/0`
+- HTTP : `aws ec2 authorize-security-group-ingress --group-name MyWebAppSG --protocol tcp --port 80 --cidr 0.0.0.0/0`
 
-HTTPS : `aws ec2 authorize-security-group-ingress --group-name MyWebAppSG --protocol tcp --port 443 --cidr 0.0.0.0/0`
+- HTTPS : `aws ec2 authorize-security-group-ingress --group-name MyWebAppSG --protocol tcp --port 443 --cidr 0.0.0.0/0`
 
 Troubleshooting: If unable to connect via SSH, check the IP in the rule matches your current public IP.
 
-Step 3: Create IAM Role for EC2
+### Step 3: Create IAM Role for EC2
 
 I created a trust policy (trust-policy.json):
 
@@ -93,17 +93,17 @@ Attach CloudWatch access policy: `aws iam attach-role-policy --role-name MyWebAp
 
 Role appears in IAM console with proper policy attached. CloudWatch logs require EC2 instance profile to allow agent to send metrics.
 
-Step 4: Launch EC2 Instance
+### Step 4: Launch EC2 Instance
 
 `aws ec2 run-instances --image-id ami-0abcdef1234567890 --count 1 --instance-type t2.micro --key-name MyWebAppKey --security-groups MyWebAppSG --iam-instance-profile Name=MyWebAppRole`
 
 Replace ami-0abcdef1234567890 with the latest Linux/Windows AMI ID in your region. Public IP and Instance ID returned.
 
-Step 5: SSH into EC2
+### Step 5: SSH into EC2
 
 `ssh -i MyWebAppKey.pem ec2-user@PUBLIC_IP`
 
-Step 6: Deploy Web Application
+### Step 6: Deploy Web Application
 
 Linux Example (Apache web server):
 
@@ -117,9 +117,9 @@ I opened browser at http://PUBLIC_IP and see “Hello AWS Secure Web App”.
 
 This is fully structured and ready for your Phase 1 report. You just need to:
 
-Replace AMI ID, Public IP, Instance ID, and SNS ARN with your actual values.
-Take screenshots during implementation and insert them where placeholders are.
-Copy commands into Appendix or CLI section of the report for grading.
+- Replace AMI ID, Public IP, Instance ID, and SNS ARN with your actual values.
+- Take screenshots during implementation and insert them where placeholders are.
+- Copy commands into Appendix or CLI section of the report for grading.
 
 ### Phase 2. design
 - cloudwatch
