@@ -136,6 +136,10 @@ This is fully structured and ready for your Phase 1 report. You just need to:
 
 ### References
 
+Cloud Operation AWS course Moodle page
+
+AWS CLI Command Reference: https://docs.aws.amazon.com/cli/latest/
+
 
 
 
