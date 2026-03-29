@@ -4,7 +4,7 @@
 ### AWS Cloud Operations
 ### 9.2.2026
 
-## Chapter 1 - Introduction
+## 1. Introduction
 
 This project focuses on building a secure web application in AWS with basic monitoring and threat detection capabilites. 
 
@@ -19,7 +19,7 @@ Project Goals:
    - To create alerts for suspicious or unusual behavior
    - To improve overall AWS cloud architechture and operational skills
 
-## Phase 1. Simple architecture planning and implementation
+## 2. Project plan
 
 ### Phase 1 design. 
 - EC2 isntance: Hosts the web applciation (Windows server running a web server)
@@ -31,9 +31,11 @@ Reasons for chosen services:
 - Security: Basic network-level security to restrict access.
 - IAM: Proper access control is critical for cloud security best practices.
 
-[User] --> [Security Group/Firewall] --> [EC2 Instance (Web Server)] --> [CloudWatch Logs & Alarms] --> [IAM Role Access to AWS Resources]
+### Phase 2. design.
+- cloudwatch
+- .....
 
-### Phase 1 implementation
+## 3. Implementation (phase 1)
 
 Resources and Configuration
 
@@ -121,8 +123,18 @@ This is fully structured and ready for your Phase 1 report. You just need to:
 - Take screenshots during implementation and insert them where placeholders are.
 - Copy commands into Appendix or CLI section of the report for grading.
 
-### Phase 2. design
-- cloudwatch
+## (phase2)
+
+## 4. Enchancements
+   
+## 5. Enchancement X implementation
+
+## 6. Conclusions
+
+### References
+
+
+
 
 
 
