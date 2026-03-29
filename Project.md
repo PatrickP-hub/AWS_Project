@@ -96,6 +96,8 @@ Attach CloudWatch access policy: `aws iam attach-role-policy --role-name MyWebAp
 
 Role appears in IAM console with proper policy attached. CloudWatch logs require EC2 instance profile to allow agent to send metrics.
 
+“The role includes the CloudWatch policy, which will be utilized in Phase 2 when monitoring is configured.
+
 ### Step 4: Launch EC2 Instance
 
 `aws ec2 run-instances --image-id ami-0abcdef1234567890 --count 1 --instance-type t2.micro --key-name MyWebAppKey --security-groups MyWebAppSG --iam-instance-profile Name=MyWebAppRole`
@@ -110,11 +112,11 @@ Replace ami-0abcdef1234567890 with the latest Linux/Windows AMI ID in your regio
 
 Linux Example (Apache web server):
 
-`sudo yum update -y
-sudo yum install httpd -y
-sudo systemctl start httpd
-sudo systemctl enable httpd
-echo "<h1>Hello AWS Secure Web App</h1>" | sudo tee /var/www/html/index.html`
+`sudo yum update -y`
+`sudo yum install httpd -y`
+`sudo systemctl start httpd`
+`sudo systemctl enable httpd`
+`echo "<h1>Hello AWS Secure Web App</h1>" | sudo tee /var/www/html/index.html`
 
 I opened browser at http://PUBLIC_IP and see “Hello AWS Secure Web App”.
 
