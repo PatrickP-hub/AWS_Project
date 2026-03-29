@@ -21,7 +21,26 @@ Project Goals:
 
 ## Phase 1. Simple architecture planning and implementation
 
+### Phase 1 design. 
+- EC2 isntance: Hosts the web applciation (Windows server running a web server)
+- Firewall / Security group: Controls inbound/outbound trafficc to the EC2 instance.
+- IAM Roles: Ensures least-privilege access to AWS Resources.
+- Cloudwatch: Monitors logs and metrics, triggers alarms for suspicious activity.
 
+Reasons for chosen services:
+- EC2: Provides a simple and flexible environment for hosting a web application.
+- Security: Basic network-level security to restrict access.
+- IAM: Proper access control is critical for cloud security best practices.
+- Cloudwatch: Enables operational visibility and automated alerting
+
+[User] --> [Security Group/Firewall] --> [EC2 Instance (Web Server)] --> [CloudWatch Logs & Alarms] --> [IAM Role Access to AWS Resources]
+
+### Phase 1 implementation
+
+
+
+### Phase 2. desing
+- incoming.....
 
 
 
