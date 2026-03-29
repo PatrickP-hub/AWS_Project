@@ -112,11 +112,11 @@ Replace ami-0abcdef1234567890 with the latest Linux/Windows AMI ID in your regio
 
 Linux Example (Apache web server):
 
-print("sudo yum update -y
+(sudo yum update -y
 sudo yum install httpd -y
 sudo systemctl start httpd
 sudo systemctl enable httpd
-echo "<h1>Hello AWS Secure Web App</h1>" | sudo tee /var/www/html/index.html")
+echo "<h1>Hello AWS Secure Web App</h1>" | sudo tee /var/www/html/index.html)
 
 I opened browser at http://PUBLIC_IP and see “Hello AWS Secure Web App”.
 
