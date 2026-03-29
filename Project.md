@@ -2,23 +2,27 @@
 
 ### Patrick Palmroth 
 ### AWS Cloud Operations
-
+### 9.2.2026
 
 ## Chapter 1 - Introduction
 
-### Idea 10.2.2026
+This project focuses on building a secure web application in AWS with basic monitoring and threat detection capabilites. 
 
-I chose this AWS project because, I wanted a simple idea for building a secure web application that is monitored and projected with cloud security tools.
+The main idea is to deploy a simple web application running on an EC2 instance and secure it using AWS security best practices such as security groups (firewall rules) and IAM roles. In addition, the system will be monitored using Amazon CloudWatch to detect suspicous activity and ensure system health.
 
-Means:
-  - Service is running in EC2 instance
-  - Secured with firewall and IAM
-  - System is monitored with CloudWatch
-  - Suspicious activity alerts
+The motivation for choosing this topic is to gain hands-on experience in building secure cloud atchitechtures and understanding how monitoring and alerting work in AWS environments.
 
-The goal for the project is:
-  - Learning to build better cloud architecture
-  - To have functional and secure web application
-  - Understand better how to improve AWS skills
+Project Goals:
+   - To design and implement a simple cloud-based web application
+   - To apply basic security practices (IAM and firewall configuration)
+   - To monitor system performance and activity using CloudWatch
+   - To create alerts for suspicious or unusual behavior
+   - To improve overall AWS cloud architechture and operational skills
+
+## Phase 1. Simple architecture planning and implementation
+
+
+
+
 
 
