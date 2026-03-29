@@ -112,7 +112,7 @@ Replace ami-0abcdef1234567890 with the latest Linux/Windows AMI ID in your regio
 
 Linux Example (Apache web server):
 
-`sudo yum update -y`
+<sudo yum update -y>
 `sudo yum install httpd -y`
 `sudo systemctl start httpd`
 `sudo systemctl enable httpd`
