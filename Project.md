@@ -44,8 +44,9 @@ Resources to create:
 - EC2 instance – Windows or Linux web server (t2.micro, free tier).
 - Security Group – Allow HTTP (80), HTTPS (443), and SSH (22) from your IP only.
 - IAM Role – Minimum permissions for CloudWatch logs.
-- CloudWatch Alarm – Monitor CPU or login activity.
 - Optional: Key pair for SSH access.
+
+System monitoring and alerting with CloudWatch will be implemented in Phase 2 of the project.
 
 ### Step 1. Create Key Pair
 
