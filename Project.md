@@ -48,6 +48,46 @@ Resources to create:
 
 System monitoring and alerting with CloudWatch will be implemented in Phase 2 of the project.
 
+I started this project with creating a EC2-instance in AWS manager. I searched "EC2" and pressed launch instance with these informations:
+ - Name = project
+ - AMI = Aamzon Linux 2023 kernel-6.1 AMI
+ - Instance type = t2.mciro
+ - Network setting -> edit 
+    - key pair name = vockey
+    - VPC = default
+    - Subnet = Public
+    - Auto-assign public IP = enable
+    - Security group name = project security group
+    - description = permit ssh connections
+- configure storage = 1x8GiB gp3
+
+And lastly launch the instance
+
+<img width="429" height="60" alt="image" src="https://github.com/user-attachments/assets/6fc24921-360b-4b4a-81df-7963b976957f" />
+
+<img width="640" height="728" alt="image" src="https://github.com/user-attachments/assets/fed4d657-31b5-4966-b16f-beee19315be4" />
+
+<img width="653" height="252" alt="image" src="https://github.com/user-attachments/assets/796ee7c6-c0b1-48f9-846e-8919cf614391" />
+
+Connected to the EC2 instance using PuTTY and a .ppk private key.
+
+<img width="777" height="270" alt="image" src="https://github.com/user-attachments/assets/a3919020-48cc-41b9-aedf-54979c5da029" />
+
+<img width="776" height="338" alt="image" src="https://github.com/user-attachments/assets/09bc15c8-729f-4fc2-8ebb-22ae55b2b509" />
+
+<img width="775" height="62" alt="image" src="https://github.com/user-attachments/assets/6712b0e7-87e8-47ba-aa7f-4ef033104387" />
+
+<img width="856" height="367" alt="image" src="https://github.com/user-attachments/assets/4868bc6e-6656-48d5-9b84-56f389bdcc8f" />
+
+<img width="774" height="257" alt="image" src="https://github.com/user-attachments/assets/ddb65e2c-4bdb-4374-a525-c33bcda3a56b" />
+
+<img width="1212" height="318" alt="image" src="https://github.com/user-attachments/assets/6bc91a06-23c5-48f7-a507-1fa8bcd45dc6" />
+
+<img width="427" height="108" alt="image" src="https://github.com/user-attachments/assets/d6f38047-6f20-40ec-b177-26d22bd0e7b5" />
+
+<img width="426" height="37" alt="image" src="https://github.com/user-attachments/assets/48b8b0db-cba4-4b2c-8122-9da5c8dee4a5" />
+
+
 ### Step 1. Create Key Pair
 
 `aws ec2 create-key-pair --key-name MyWebAppKey --query 'KeyMaterial' --output text > MyWebAppKey.pem`
