@@ -77,10 +77,15 @@ And started with updating system and installed apache `sudo yum install httpd -y
 
 <img width="777" height="270" alt="image" src="https://github.com/user-attachments/assets/a3919020-48cc-41b9-aedf-54979c5da029" />
 
+After this I started and enabled the web server `sudo systemctl start httpd` & `sudo systemctl enable httpd`
 
 <img width="776" height="338" alt="image" src="https://github.com/user-attachments/assets/09bc15c8-729f-4fc2-8ebb-22ae55b2b509" />
 
+Then I created the index page with command `echo "<h1>Tämä on projektin etusivu</h1>" | sudo tee /var/www/html/index.html`
+
 <img width="775" height="62" alt="image" src="https://github.com/user-attachments/assets/6712b0e7-87e8-47ba-aa7f-4ef033104387" />
+
+
 
 <img width="856" height="367" alt="image" src="https://github.com/user-attachments/assets/4868bc6e-6656-48d5-9b84-56f389bdcc8f" />
 
