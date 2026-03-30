@@ -48,7 +48,9 @@ Resources to create:
 
 System monitoring and alerting with CloudWatch will be implemented in Phase 2 of the project.
 
-I started this project with creating a EC2-instance in AWS manager. I searched "EC2" and pressed launch instance with these informations:
+### EC2 instance creation
+
+The project begins by creating an EC2 instance in AWS manager. I searched "EC2" and pressed launch instance. The EC2 instance was launched with the following settings…
  - Name = project
  - AMI = Aamzon Linux 2023 kernel-6.1 AMI
  - Instance type = t2.mciro
@@ -73,6 +75,8 @@ After this I downloaded the .ppk file from AWS lab and put it to PuTTy.exe with 
 
 Connected to the EC2 instance using PuTTY and a .ppk private key and "ec2-user". 
 
+### Apache installation
+
 And started with updating system and installed apache `sudo yum install httpd -y`
 
 <img width="777" height="270" alt="image" src="https://github.com/user-attachments/assets/a3919020-48cc-41b9-aedf-54979c5da029" />
@@ -92,6 +96,8 @@ I went to check web page in the browser `http://publicIP`
 It couldn't be reached so I checked with command `sudo systemctl status httpd` if it is running or not 
 
 <img width="774" height="257" alt="image" src="https://github.com/user-attachments/assets/ddb65e2c-4bdb-4374-a525-c33bcda3a56b" />
+
+### Security group configuration
 
 I forgot to allow rule "http" in the security group so I did this part next
 
@@ -135,7 +141,7 @@ It didn't let me do the IAM role so I went to my EC2 instance -> actions -> modi
 <img width="478" height="49" alt="image" src="https://github.com/user-attachments/assets/74a9a452-09b5-4e07-91cf-a217722f1909" />
 <img width="117" height="58" alt="image" src="https://github.com/user-attachments/assets/be32b12a-b376-40d6-9499-44d84722116b" />
 
-The IAM Role was created!
+Phase 1 successfully established a basic web application environment on EC2 with proper security group rules, IAM role preparation for CloudWatch, and a working Apache web server.
 
 ## (phase2)
 
