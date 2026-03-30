@@ -85,13 +85,19 @@ Then I created the index page with command `echo "<h1>Tämä on projektin etusiv
 
 <img width="775" height="62" alt="image" src="https://github.com/user-attachments/assets/6712b0e7-87e8-47ba-aa7f-4ef033104387" />
 
-
+I went to check web page in the browser `http://publicIP`
 
 <img width="856" height="367" alt="image" src="https://github.com/user-attachments/assets/4868bc6e-6656-48d5-9b84-56f389bdcc8f" />
 
+It couldn't be reached so I checked with command `sudo systemctl status httpd` if it is running or not 
+
 <img width="774" height="257" alt="image" src="https://github.com/user-attachments/assets/ddb65e2c-4bdb-4374-a525-c33bcda3a56b" />
 
+I forgot to allow rule "http" in the security group so I did this part next
+
 <img width="1212" height="318" alt="image" src="https://github.com/user-attachments/assets/6bc91a06-23c5-48f7-a507-1fa8bcd45dc6" />
+
+I gave this informations and tried again 
 
 <img width="427" height="108" alt="image" src="https://github.com/user-attachments/assets/d6f38047-6f20-40ec-b177-26d22bd0e7b5" />
 
