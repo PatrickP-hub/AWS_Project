@@ -61,15 +61,17 @@ I started this project with creating a EC2-instance in AWS manager. I searched "
     - description = permit ssh connections
 - configure storage = 1x8GiB gp3
 
-And lastly launch the instance
+And lastly launch the instance.
 
 <img width="429" height="60" alt="image" src="https://github.com/user-attachments/assets/6fc24921-360b-4b4a-81df-7963b976957f" />
 
 <img width="640" height="728" alt="image" src="https://github.com/user-attachments/assets/fed4d657-31b5-4966-b16f-beee19315be4" />
 
+After this I downloaded the .ppk file from AWS lab and put it to PuTTy.exe with connection timed out 30seconds and with the public IPv4 address from the EC2-instance.
+
 <img width="653" height="252" alt="image" src="https://github.com/user-attachments/assets/796ee7c6-c0b1-48f9-846e-8919cf614391" />
 
-Connected to the EC2 instance using PuTTY and a .ppk private key.
+Connected to the EC2 instance using PuTTY and a .ppk private key and "ec2-user". 
 
 <img width="777" height="270" alt="image" src="https://github.com/user-attachments/assets/a3919020-48cc-41b9-aedf-54979c5da029" />
 
