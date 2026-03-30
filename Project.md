@@ -97,9 +97,11 @@ I forgot to allow rule "http" in the security group so I did this part next
 
 <img width="1212" height="318" alt="image" src="https://github.com/user-attachments/assets/6bc91a06-23c5-48f7-a507-1fa8bcd45dc6" />
 
-I gave this informations and tried again 
+I gave this informations to inbound rules and tried again.
 
 <img width="427" height="108" alt="image" src="https://github.com/user-attachments/assets/d6f38047-6f20-40ec-b177-26d22bd0e7b5" />
+
+It worked! I tried also with the command `curl -I localhost`
 
 <img width="426" height="37" alt="image" src="https://github.com/user-attachments/assets/48b8b0db-cba4-4b2c-8122-9da5c8dee4a5" />
 
