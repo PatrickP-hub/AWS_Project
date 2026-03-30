@@ -105,6 +105,39 @@ It worked! I tried also with the command `curl -I localhost`
 
 <img width="426" height="37" alt="image" src="https://github.com/user-attachments/assets/48b8b0db-cba4-4b2c-8122-9da5c8dee4a5" />
 
+I made one more rule to allow "HTTPS" so I have the all 3 protocols added to my project.
+
+<img width="1186" height="84" alt="image" src="https://github.com/user-attachments/assets/86546305-d589-4e9c-ae42-4c2343aa4610" />
+
+Then I downloaded SSLmodule `sudo yum install -y mod_ssl`
+
+<img width="714" height="87" alt="image" src="https://github.com/user-attachments/assets/d7cb599d-a97e-4a85-92b3-3514f5b7f06c" />
+<img width="1203" height="530" alt="image" src="https://github.com/user-attachments/assets/10c313e1-93dc-48eb-b235-9871100dd987" />
+
+
+I checked if the https connection worked and it worked, but te connection is not secured so maybe I try to do that next
+
+
+
+
+After this I wanted to create IAM role for the phase 2 "CloudWacth" logs. I went to IAM -> Roles and created role. I gave these informations
+- trusted entity type = AWS service
+- Use case = EC2
+
+After this I added permissions policies to "CloudWatchAgentServerPolicy"
+
+<img width="947" height="281" alt="image" src="https://github.com/user-attachments/assets/d0f14226-527e-456f-bf2d-f44eef1f42fb" />
+
+Last I gave the name "Project-CloudWatch" and moved on with the default .json trust policy.
+
+<img width="916" height="579" alt="image" src="https://github.com/user-attachments/assets/eec50469-f339-4746-add8-25ac23450f8e" />
+<img width="1179" height="80" alt="image" src="https://github.com/user-attachments/assets/bfafcc93-d88f-439a-853a-2de11cd90e91" />
+
+It didn't let me do the IAM role so I went to my EC2 instance -> actions -> modify IAM role and chose "labinstanceProfile" and updated the IAM role
+
+<img width="478" height="49" alt="image" src="https://github.com/user-attachments/assets/74a9a452-09b5-4e07-91cf-a217722f1909" />
+
+
 
 ### Step 1. Create Key Pair
 
