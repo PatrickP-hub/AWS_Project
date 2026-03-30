@@ -73,9 +73,10 @@ After this I downloaded the .ppk file from AWS lab and put it to PuTTy.exe with 
 
 Connected to the EC2 instance using PuTTY and a .ppk private key and "ec2-user". 
 
-
+And started with updating system and installed apache `sudo yum install httpd -y`
 
 <img width="777" height="270" alt="image" src="https://github.com/user-attachments/assets/a3919020-48cc-41b9-aedf-54979c5da029" />
+
 
 <img width="776" height="338" alt="image" src="https://github.com/user-attachments/assets/09bc15c8-729f-4fc2-8ebb-22ae55b2b509" />
 
