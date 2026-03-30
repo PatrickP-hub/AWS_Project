@@ -115,10 +115,7 @@ Then I downloaded SSLmodule `sudo yum install -y mod_ssl`
 <img width="1203" height="530" alt="image" src="https://github.com/user-attachments/assets/10c313e1-93dc-48eb-b235-9871100dd987" />
 
 
-I checked if the https connection worked and it worked, but te connection is not secured so maybe I try to do that next
-
-
-
+I checked if the https connection worked and it worked, but te connection is not secured, but after some research I think it doesn't matter that much and the browser just doens't recognize the signature but it is still trusted because I made it. 
 
 After this I wanted to create IAM role for the phase 2 "CloudWacth" logs. I went to IAM -> Roles and created role. I gave these informations
 - trusted entity type = AWS service
@@ -136,6 +133,7 @@ Last I gave the name "Project-CloudWatch" and moved on with the default .json tr
 It didn't let me do the IAM role so I went to my EC2 instance -> actions -> modify IAM role and chose "labinstanceProfile" and updated the IAM role
 
 <img width="478" height="49" alt="image" src="https://github.com/user-attachments/assets/74a9a452-09b5-4e07-91cf-a217722f1909" />
+<img width="117" height="58" alt="image" src="https://github.com/user-attachments/assets/be32b12a-b376-40d6-9499-44d84722116b" />
 
 
 
