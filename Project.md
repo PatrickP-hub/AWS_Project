@@ -150,11 +150,111 @@ It didn't let me do the IAM role so I went to my EC2 instance -> actions -> modi
 
 Phase 1 successfully established a basic web application environment on EC2 with proper security group rules, IAM role preparation for CloudWatch, and a working Apache web server.
 
-## (phase2)
-
 ## 4. Enchancements
+
+Phase 2 improves the system with:
+- Real-time monitoring using CloudWatch
+- Centralized log collection and analysis
+- Automated alerts for suspicious activity
+- Better visibility into system performance
+- Faster response to incidents
    
-## 5. Enchancement X implementation
+## 5. Enchancement X implementation (phase2)
+
+### Installing CloudWatch Agent
+
+I started first by going to EC2 with putty.exe, then was time to configure the followings:
+- Installing the CloudWatch agent
+- Configuration
+- Starting
+- Testing
+
+First I updated the system packages
+<img width="402" height="17" alt="image" src="https://github.com/user-attachments/assets/5af3d92b-057f-4989-94b6-73422276037a" />
+
+After that I installed the CloudWatch Agent
+
+<img width="644" height="280" alt="image" src="https://github.com/user-attachments/assets/a14e2d5e-d748-4eb6-9f6b-e34c9a86a7c8" />
+
+When this was done I wanted to define the metrics and log files with the wizard command with:
+
+<img width="647" height="30" alt="image" src="https://github.com/user-attachments/assets/a0327984-2b08-4350-b50f-6f7d6c1581a6" />
+
+First I chose the Linux operation system and then I chose these options:
+
+<img width="755" height="950" alt="image" src="https://github.com/user-attachments/assets/c9308028-841b-4972-83aa-b9e8a597d15b" />
+
+Here is the whole command:
+
+<img width="601" height="405" alt="image" src="https://github.com/user-attachments/assets/72ce785c-e274-4b89-a166-270593bd575a" />
+
+<img width="752" height="430" alt="image" src="https://github.com/user-attachments/assets/74ba5545-ce08-4c10-9a4e-b09f640b5258" />
+
+<img width="756" height="674" alt="image" src="https://github.com/user-attachments/assets/2def5b3a-7332-45ac-8d3b-fb63a6d5b01a" />
+
+<img width="753" height="642" alt="image" src="https://github.com/user-attachments/assets/cd2de5ac-521c-4020-8cc6-06b0d23047f2" />
+
+<img width="672" height="131" alt="image" src="https://github.com/user-attachments/assets/22525190-39fd-44f4-8a97-cf656eb97603" />
+
+After these congiurations I gave these commands:
+
+<img width="751" height="67" alt="image" src="https://github.com/user-attachments/assets/81cd6e24-056b-4a4f-aa30-05ed1b276675" />
+
+CloudWatch Agent was started and enabled to run automatically on system boot. I wanted to check the status from the cli:
+
+<img width="771" height="112" alt="image" src="https://github.com/user-attachments/assets/c3adf650-37bd-4d39-bf2d-df253807368c" />
+
+It didn't start properly... I researched some and tried to overwrite the whole code again
+
+<img width="853" height="579" alt="image" src="https://github.com/user-attachments/assets/13ad3665-29c4-493a-a4eb-587af3a20c6f" />
+
+<img width="868" height="32" alt="image" src="https://github.com/user-attachments/assets/d7fc93e2-dca6-451a-9f97-d58a297049e3" />
+
+Then was time to try again the status:
+
+<img width="866" height="170" alt="image" src="https://github.com/user-attachments/assets/22fb2dcf-6196-4f08-86d8-b6a3bffa4148" />
+
+It worked!
+
+### CloudWatch Alarm
+
+I went to CloudWatch in AWS Management console and from the left navigation pane "alarms" -> create alarm.
+
+First select metric -> EC2
+
+<img width="826" height="728" alt="image" src="https://github.com/user-attachments/assets/a0f7f2ca-b5c3-4de2-977f-8421ace2e94f" />
+
+Then Per-Instance metrics
+
+<img width="378" height="53" alt="image" src="https://github.com/user-attachments/assets/38659e1b-6e78-437d-8062-f8694611c790" />
+
+Selected the CPUUtilization
+
+<img width="560" height="35" alt="image" src="https://github.com/user-attachments/assets/bf9811a0-2944-45dd-9579-eeedb56033b0" />
+
+<img width="637" height="480" alt="image" src="https://github.com/user-attachments/assets/6e582087-45bf-42ff-9b50-3581277e9750" />
+
+And I chose these options:
+
+<img width="625" height="408" alt="image" src="https://github.com/user-attachments/assets/8bc120d7-8397-4e49-8674-2a084a7d37dc" />
+
+<img width="653" height="626" alt="image" src="https://github.com/user-attachments/assets/e85baedd-5574-422c-b9e8-4cfca25a4aaa" />
+
+And lastly the name and create alarm:
+
+<img width="186" height="70" alt="image" src="https://github.com/user-attachments/assets/caedb93d-6845-432e-9cca-75954d12842d" />
+
+<img width="692" height="40" alt="image" src="https://github.com/user-attachments/assets/d797123d-3ced-4823-9342-1deaaed87596" />
+
+Went to confirm the email to SNS notifications.
+
+<img width="511" height="149" alt="image" src="https://github.com/user-attachments/assets/2aa346d0-ac75-466a-9b90-b227b3924a92" />
+
+Now was time to test the alarm with command:
+
+<img width="859" height="182" alt="image" src="https://github.com/user-attachments/assets/d3f95594-2590-4a32-8327-90d6b7834a1c" />
+
+
 
 ## 6. Conclusions
 
