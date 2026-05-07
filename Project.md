@@ -150,6 +150,9 @@ It didn't let me do the IAM role so I went to my EC2 instance -> actions -> modi
 
 Phase 1 successfully established a basic web application environment on EC2 with proper security group rules, IAM role preparation for CloudWatch, and a working Apache web server.
 
+<img width="501" height="743" alt="image" src="https://github.com/user-attachments/assets/8cb10ece-5581-401e-8bf2-c8f5cabdfe87" />
+
+
 ## 4. Enchancements
 
 Phase 2 improves the system with:
