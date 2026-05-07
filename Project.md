@@ -254,9 +254,19 @@ Now was time to test the alarm with command:
 
 <img width="859" height="182" alt="image" src="https://github.com/user-attachments/assets/d3f95594-2590-4a32-8327-90d6b7834a1c" />
 
+I waited for a moment and checked if it did anything to graph
 
+<img width="682" height="529" alt="image" src="https://github.com/user-attachments/assets/04209730-8d0f-4867-bc93-c7f7f1a7df73" />
+
+There is little bump so I would say that CloudWatch alarm works!
 
 ## 6. Conclusions
+
+Phase 1 of the project successfully established a basic but functional web application environment on AWS. An EC2 instance was deployed and configured with an Apache web server, allowing the application to be accessed via HTTP and HTTPS. Security groups were implemented to control inbound traffic, ensuring that only required ports were open. In addition, an IAM role was prepared to enable secure integration with AWS services. Overall, Phase 1 provided a solid foundation for a secure cloud-based web application.
+
+Phase 2 significantly enhanced the system by introducing monitoring and threat detection capabilities using Amazon CloudWatch. The CloudWatch Agent was installed on the EC2 instance to collect system metrics such as CPU, memory, and disk usage, as well as application logs from the web server. CloudWatch Alarms were configured to detect abnormal CPU usage, and Amazon SNS was used to send email notifications when thresholds were exceeded. This improved the system’s observability and enabled early detection of potential issues or suspicious activity.
+
+Overall, the project demonstrates how a simple web application can be transformed into a more secure and production-ready system by applying AWS security best practices and adding monitoring and alerting mechanisms. The combination of EC2, IAM, CloudWatch, and SNS provides a basic but effective cloud security and monitoring architecture.
 
 ### References
 
