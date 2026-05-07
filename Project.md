@@ -32,8 +32,15 @@ Reasons for chosen services:
 - IAM: Proper access control is critical for cloud security best practices.
 
 ### Phase 2. design.
-- cloudwatch
-- .....
+- Amazon CloudWatch - collects metrics and logs from the EC2 instance
+- CloudWatch Agent - sends system-level metrics (CPU, memory, disk)
+- CloudWatch Alarms - triggers alerts based on thresholds
+- SNS (Simple Notification Service) - sends notifications (email)
+
+Objectives:
+- Detect unusual system activity (high CPU usage)
+- Monitor system health in real time
+- Receive Alerts about potential issues or threats
 
 ## 3. Implementation (phase 1)
 
